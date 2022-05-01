@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
+import { Link as GatsbyLink } from 'gatsby'
 
 import { withCard } from "./withCard";
 
 export const PostCard = withCard(({ post }: any) => (
-  <Link to={post?.full_slug}>
+  <Link as={GatsbyLink} to={post?.full_slug}>
     <Flex alignItems={"center"} gap={6}>
       {post.content.post_icon &&
         <Box>
@@ -14,6 +14,6 @@ export const PostCard = withCard(({ post }: any) => (
       }
       <Heading as={"h4"} fontSize={26}>{post?.name}</Heading>
     </Flex>
-    <pre>{JSON.stringify(post, null,2)}</pre>
+    {/*<pre>{JSON.stringify(post, null,2)}</pre>*/}
   </Link>
 ))

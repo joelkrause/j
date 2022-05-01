@@ -13,7 +13,7 @@ const Layout: React.FC<PageProps> = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Box as={"main"} mt={{ base: 16, lg: 32 }}>{children}</Box>
+      <Box as={"main"} mt={{ base: 16, lg: 40 }}>{children}</Box>
     </ ChakraProvider>
   )
 }
