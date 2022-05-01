@@ -1,13 +1,15 @@
 import React from "react"
-import { AllPosts } from './AllPosts/AllPosts';
-import { FeaturedPosts } from './FeaturedPosts/FeaturedPosts';
+import { AllPosts } from './AllPosts/AllPosts'
+import { FeaturedPosts } from './FeaturedPosts/FeaturedPosts'
+import { HomeHero} from "./HomeHero/HomeHero"
 
 export const withSections = Component => ({ name = "Sections", sections }: any) => {
   Component.displayName = name
 
   const Components = {
     'allPosts': AllPosts,
-    'featuredPosts': FeaturedPosts
+    'featuredPosts': FeaturedPosts,
+    'homeHero': HomeHero
   }
 
 const ComponentLoader = ({blok}) => {

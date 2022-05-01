@@ -9,10 +9,11 @@ const theme = extendTheme({ config,
   styles: {
     global: () => ({
       body: {
-        bg: useColorModeValue("#fff","#222")
-  }
-})
-},
+        bg: useColorModeValue("#fff","#222"),
+        fontSize:"1.25rem"
+      }
+    })
+  },
   fonts: {
     body: 'Outfit, sans-serif',
     heading: 'Outfit, sans-serif'

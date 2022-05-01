@@ -12,12 +12,14 @@ export const withDesktopNavigation = Component => ({ name = "Header" }: any) => 
               GlobalcontentItem(id: "global-content", resolve_links:"url") {
                   content {
                       header_nav
+                      social_links
                   }
               }
           }
       }
   `)
   const HeaderNav = data.Storyblok.GlobalcontentItem.content.header_nav
+  const SocialLinks = data.Storyblok.GlobalcontentItem.content.social_links
 
-  return <Component colorScheme={colorMode} updateColorScheme={toggleColorMode} headerNav={HeaderNav} />
+  return <Component colorScheme={colorMode} updateColorScheme={toggleColorMode} headerNav={HeaderNav} socialLinks={SocialLinks} />
 }
